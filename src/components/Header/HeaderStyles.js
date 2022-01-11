@@ -22,16 +22,24 @@ export const Div1 = styled.div`
   display: flex;
   flex-direction: row;
   align-content: center;
+
+  .container--logo {
+    display: flex;
+    align-items: center;
+
+  }
+
   @media ${(props) => props.theme.breakpoints.sm} {
     grid-area: 1 / 1 / 2 / 3;
   }
 `;
 export const Div2 = styled.div`
-  grid-area: 1 / 2 / 2 / 4;
+  grid-area: 1 / 2 / 2 / 5;
   display: flex;
   justify-content: space-around;
+  margin-top: 2rem;
   @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 2 / 3 / 5;
+    grid-area: 2 / 1 / 3 / 10;
   }
 `;
 export const Div3 = styled.div`
@@ -45,13 +53,20 @@ export const Div3 = styled.div`
   }
 `;
 
+export const SpanLogo = styled.span`
+  margin-left: 2rem;
+ 
+`
+
 // Navigation Links
 export const NavLink = styled.a`
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
   transition: 0.4s ease;
   color: #fff;
+  margin-right: 2rem;
+  text-decoration:  overline; 
 
   &:hover {
     color: #002079;
@@ -59,7 +74,7 @@ export const NavLink = styled.a`
     cursor: pointer;
   }
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.5rem;
+    width: 100%;
   }
 `;
 
@@ -124,3 +139,4 @@ border-radius: 50px;
     
   }
 `
+

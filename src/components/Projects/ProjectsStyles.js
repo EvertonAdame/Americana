@@ -45,7 +45,25 @@ export const TitleContent = styled.div`
 
 `;
 
+export const SelectDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
 
+`
+
+export const ItemDiv = styled.button`
+  background: #0078ea;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
+
+`
 
 export const HeaderThree = styled.h3`
   font-weight: 500;
@@ -55,11 +73,11 @@ export const HeaderThree = styled.h3`
 `;
 
 export const Hr = styled.hr`
-  width: 50px;
+  width: 100px;
   height: 3px;
   margin: 10px auto;
   border: 0;
-  background: #d0bb57;
+  background: red;
 `;
 
 
@@ -85,10 +103,10 @@ export const UtilityList = styled.ul`
 `;
 
 export const ExternalLinks = styled.a`
-color:#d4c0c0;
+color: #000;
 font-size: 1.6rem;
 padding:1rem 1.5rem;
-background: #6b3030;
+background: #fff;
 border-radius: 15px;
 transition: 0.5s;
 &:hover{

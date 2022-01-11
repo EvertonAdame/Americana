@@ -35,11 +35,12 @@ export const LinkItem = styled.a`
 	}
 
 	@media ${props => props.theme.breakpoints.sm} {
-		font-size: 8px;
+		font-size: 18px;
 		line-height: 14px;
 		margin-bottom: 8px;
 		display: flex;
 		align-items: center;
+		
 	}
 `
 
@@ -130,9 +131,12 @@ export const LinkList = styled.ul`
 		gap: 16px;
 	}
 	@media ${props => props.theme.breakpoints.sm} {
-		width: 100%;
-		padding: 32px 4px 16px;
-		gap: 5px;
+	padding: 0 16px 48px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem; 
 	}
 `
 
@@ -141,6 +145,13 @@ export const LinkColumn = styled.div`
 	flex-direction: column;
 	max-width: 220px;
 	width: 100%;
+
+	@media ${props => props.theme.breakpoints.sm}{
+		border-bottom: 1px solid #fff;
+		width: 100%;
+		max-width: 500px;
+		
+	}
 `
 export const LinkTitle = styled.h4`
 	font-style: normal;
@@ -148,12 +159,43 @@ export const LinkTitle = styled.h4`
 	font-size: 12px;
 	line-height: 24px;
 	text-transform: uppercase;
-	color: rgba(255, 255, 255, 0.4);
 	margin-bottom: 16px;
 
 	@media ${props => props.theme.breakpoints.sm} {
-		font-size: 10px;
+		font-size: 20px;
 		line-height: 12px;
-		margin-bottom: 8px;
+		margin-bottom: 15px;
 	}
 `
+export const InputEmail = styled.input`
+     background: ${({ alt }) => alt ? 'linear-gradient(270deg, #0b41d8 0%, #0b41d8 100%)' : 'linear-gradient(270deg, #0b41d8 0%, #945DD6 100%)'};
+    width: 60%;
+    border: none; 
+    padding: 1rem;
+    border-radius: 20px;
+    color: #fff;
+    height: ${({ alt }) => alt ? '42px' : '54px'};
+    ::placeholder {
+		color: #fff;
+
+	}
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+    height: 58px;
+    font-size: 14px;
+    margin-bottom: ${({ alt }) => alt ? '0' : '0'};
+  }
+  `;
+  export const EmailContainer = styled.div`
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+	margin-bottom: 1rem;
+
+    .label--text{
+      color: #fff;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+  
+  `

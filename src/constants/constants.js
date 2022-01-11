@@ -58,9 +58,10 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2017, text: 'Started my journey', },
-  { year: 2018, text: 'Worked as a freelance developer', },
-  { year: 2019, text: 'Founded JavaScript Mastery', },
-  { year: 2020, text: 'Shared my projects with the world', },
-  { year: 2021, text: 'Started my own platform', },
+  { year: 2017, text: 'O polo inicia a sua jornada', },
+  { year: 2018, text: 'Mais de 300 alunos matriculados', },
+  { year: 2019, text: 'Nossa equipe aumenta', },
+  { year: 2020, text: 'Mais de 500 alunos matriculados', },
+  { year: 2021, text: 'Vencemos todos os desafios', },
+  { year: 2022, text: 'Continuamos com a excelência UNIP', },
 ];

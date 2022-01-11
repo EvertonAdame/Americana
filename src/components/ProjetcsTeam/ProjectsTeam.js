@@ -5,8 +5,7 @@ import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalCompon
 import { projects } from '../../constants/constantsTeam';
 
 const ProjectsTeam = () => (
-  <Section nopadding id="projectsTeam">
-    <SectionDivider />
+  <Section nopadding id="#projectsTeam">
     <SectionTitle main>Nossa equipe</SectionTitle>
     <GridContainer>
       {projects.map((p, i) => {
@@ -20,8 +19,6 @@ const ProjectsTeam = () => (
             <div className="card-info">
             <CardInfo >{p.description}</CardInfo>
             </div>
-            
-  
           </BlogCard>
         );
       })}

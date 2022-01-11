@@ -1,22 +1,22 @@
 import React from 'react';
-
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { Box, Boxes, BoxNum, BoxText } from './AcomplishmentsStyles';
+import { AiOutlineCheck } from "react-icons/ai";
 
 const data = [
-  { number: 20, text: 'Open Source Projects'},
-  { number: 1000, text: 'Students', },
-  { number: 1900, text: 'Github Followers', },
-  { number: 5000, text: 'Github Stars', }
+  { number: "Ambições", text: 'Mudar futuros'},
+  { number: "Capacidade", text: 'Construir caminhos', },
+  { number: "Crescer", text: 'Ampliar nosso network', },
+  { number: "Adiquirir", text: 'Ampliar nossos cursos', }
 ];
 
 const Acomplishments = () => (
   <Section>
-    <SectionTitle>Personal Achievements</SectionTitle>
+    <SectionTitle>Nossas metas</SectionTitle>
     <Boxes>
       {data.map((card, index) => (
         <Box key={index}>
-          <BoxNum>{`${card.number}+`}</BoxNum>
+          <BoxNum>{card.number}<AiOutlineCheck size="1rem"/></BoxNum>
           <BoxText>{card.text}</BoxText>
         </Box>
       ))}
