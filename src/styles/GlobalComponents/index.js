@@ -3,9 +3,7 @@ import styled from 'styled-components'
 export const Section = styled.section`
   display: ${(props) => props.grid ? "grid" : "flex" };
   flex-direction: ${(props) => props.row ? "row" : "column" };
-  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
-  margin: 0 auto;
-  max-width: 1040px;
+  padding: ${(props) => props.nopadding ? "0" : "36px 24px 0" } ;
   box-sizing: content-box;
   position: relative;
   overflow: hidden;
@@ -17,11 +15,36 @@ export const Section = styled.section`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
+    padding: ${(props) => props.nopadding ? "0" : "32px 16px 0" } ;
 
     width: calc(100vw - 32px);
     flex-direction: column;
   }
+`
+
+export const CarouselContainer = styled.div`
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+   height: 100%;
+
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+   height: 50vh;
+  }
+
+`
+export const CarouselImg = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
+
+
+
 `
 
 export const SectionTitle = styled.h2`
