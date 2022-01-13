@@ -1,9 +1,9 @@
 import React from 'react';
-import { AiFillFacebook, AiFillInstagram, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
+import { AiFillPhone, AiFillFacebook, AiFillInstagram, AiFillLinkedin, AiFillYoutube, AiOutlinePushpin } from 'react-icons/ai';
 import Button from '../../styles/GlobalComponents/Button';
-
+import { RiWhatsappFill } from 'react-icons/ri';
 import { SocialIcons } from '../Header/HeaderStyles';
-import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer, EmailContainer, InputEmail } from './FooterStyles';
+import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, ItemContainer, LinkItemMap, Slogan, SocialContainer, SocialIconsContainer, EmailContainer, InputEmail } from './FooterStyles';
 
 const Footer = () => {
   return (
@@ -23,12 +23,27 @@ const Footer = () => {
       <LinkList>
         <LinkColumn>
           <LinkTitle>Localização</LinkTitle>
-          <LinkItem><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.5834484636985!2d-47.345507985404375!3d-22.74371903778964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c89958da193621%3A0xd3b49fef1cbebbc1!2sUNIP%20Americana%20-%20Polo%20Campos%20Salles!5e0!3m2!1spt-BR!2sbr!4v1641921802346!5m2!1spt-BR!2sbr" width="200" height="100" allowfullscreen="" loading="lazy"></iframe></LinkItem>
+          <LinkItem>
+          Av. Campos Sales 
+          </LinkItem>
+          <LinkItem>
+           987  Jardim Girassol
+          </LinkItem>
+          <LinkItem>
+         Americana-SP 13465-590
+          </LinkItem>
+          <LinkItemMap>
+          <a href="https://goo.gl/maps/dXhKxzrGYxBGnJ4y7">Visualizar no mapa</a><AiOutlinePushpin size="3rem"/>
+          </LinkItemMap>
         </LinkColumn>
         <LinkColumn>
           <LinkTitle>Contato</LinkTitle>
-          <LinkItem href="tel:19971670560">(19) 971670560</LinkItem>
-          <LinkItem href="tel:314-343-3432">(19) 3861-6102</LinkItem>
+          <ItemContainer>
+          <LinkItem href="tel:19971670560">(19) 97167-0560</LinkItem><div className="mb2"><RiWhatsappFill size="2rem" className=""/></div>
+          </ItemContainer>
+          <ItemContainer>
+          <LinkItem href="tel:314-343-3432">(19) 3861-6102</LinkItem><div className="mb2"><AiFillPhone size="2rem"/></div>
+          </ItemContainer>
         </LinkColumn>
         
         <LinkColumn>

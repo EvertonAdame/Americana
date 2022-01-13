@@ -14,7 +14,7 @@ const Hero = () => {
       <Section row nopadding>
         <LeftSection>
           <SectionTitle main center>
-            Conheça o<br />
+            Realize seus sonhos<br />
             polo Campos Salles
           </SectionTitle>
           <SectionText>

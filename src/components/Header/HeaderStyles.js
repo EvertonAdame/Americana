@@ -60,13 +60,13 @@ export const SpanLogo = styled.span`
 
 // Navigation Links
 export const NavLink = styled.a`
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
   transition: 0.4s ease;
   color: #fff;
-  margin-right: 2rem;
-  text-decoration:  overline; 
+  border-bottom: 1px solid #fff;
+  font-weight: bold;
 
   &:hover {
     color: #002079;

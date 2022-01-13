@@ -13,15 +13,33 @@ export const FooterWrapper = styled.section`
     width: calc(100vw - 32px);
   }
 `
-
-export const LinkItem = styled.a`
+export const ItemContainer = styled.div`
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	margin-bottom: 0.5rem;
+	
+  	.mb2{
+		margin-bottom: 25px;
+	  }
+`
+  export const LinkItemMap = styled.a`
 	font-size: 18px;
 	line-height: 30px;
 	color: rgba(255, 255, 255, 0.75);
 	margin-bottom: 16px;
+	display: flex;
+	align-items: center;
 	transition: .3s ease;
 	position: relative;
+	gap: 1rem;
 	left: 0;
+	
+	a {
+		color: white;
+		font-weight: bold;
+		border-bottom: 1px solid #fff;
+	}
 
 	&:hover {
 		color: #fff;
@@ -42,6 +60,41 @@ export const LinkItem = styled.a`
 		align-items: center;
 		
 	}
+ 
+ `
+export const LinkItem = styled.a`
+	font-size: 18px;
+	line-height: 30px;
+	color: rgba(255, 255, 255, 0.75);
+	margin-bottom: 16px;
+	transition: .3s ease;
+	position: relative;
+	left: 0;
+	
+	
+	
+	}
+	&:hover {
+		color: #fff;
+		left: 6px;
+	}
+
+	@media ${props => props.theme.breakpoints.md} {
+		font-size: 16px;
+		line-height: 28px;
+		display: flex;
+	}
+
+	@media ${props => props.theme.breakpoints.sm} {
+		font-size: 18px;
+		line-height: 14px;
+		margin-bottom: 8px;
+		display: flex;
+		align-items: center;
+		
+	}
+		
+
 `
 
 export const SocialIconsContainer = styled.div`

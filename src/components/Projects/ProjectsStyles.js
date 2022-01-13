@@ -28,7 +28,6 @@ export const BlogCard = styled.div`
   text-align: center;
   width:300px;
 
-
   .card-info {
     display: flex;
     justify-content: center;
@@ -67,15 +66,14 @@ export const ItemDiv = styled.button`
 
 export const HeaderThree = styled.h3`
   font-weight: 500;
-  letter-spacing: 2px;
   color: #9cc9e3;
-  font-size: ${(props) => props.title ? '3rem' : '2rem'};
+  font-size: ${(props) => props.title ? '2rem' : '1rem'};
 `;
 
 export const Hr = styled.hr`
   width: 100px;
   height: 3px;
-  margin: 10px auto;
+  margin: 5px auto;
   border: 0;
   background: red;
 `;
@@ -99,19 +97,18 @@ export const UtilityList = styled.ul`
   padding: 0;
   display: flex;
   justify-content: space-around;
-  margin: 2.5rem 0;
+  margin: 1.5rem 0;
 `;
 
 export const ExternalLinks = styled.a`
 color: #000;
 font-size: 1.6rem;
-padding:1rem 1.5rem;
+padding: 1rem 2.5rem;
 background: #fff;
 border-radius: 15px;
 transition: 0.5s;
 &:hover{
-  background: #801414;
-
+  background: blue;
 }
 `;
 

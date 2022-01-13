@@ -16,7 +16,7 @@ const Acomplishments = () => (
     <Boxes>
       {data.map((card, index) => (
         <Box key={index}>
-          <BoxNum>{card.number}<AiOutlineCheck size="1rem"/></BoxNum>
+          <BoxNum>{card.number} <AiOutlineCheck size="1rem"/></BoxNum>
           <BoxText>{card.text}</BoxText>
         </Box>
       ))}

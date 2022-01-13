@@ -31,9 +31,9 @@ const Header = () => {
           </div>
         </li>
         <li>
-          <Link href="#">
+          <a href="https://www.unip.br/aluno/central/">
             <NavLink>Ambiente Virtual</NavLink>
-          </Link>
+          </a>
         </li>
         <li>
           <Link href="#about">
