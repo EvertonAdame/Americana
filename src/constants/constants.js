@@ -121,10 +121,10 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2017, text: 'O polo inicia a sua jornada', },
-  { year: 2018, text: 'Mais de 300 alunos matriculados', },
-  { year: 2019, text: 'Nossa equipe aumenta', },
-  { year: 2020, text: 'Mais de 500 alunos matriculados', },
+  { year: "Lucas Ribeiro", text: 'O polo inicia a sua jornada', },
+  { year: "Duda Pimentel", text: 'Mais de 300 alunos matriculados', },
+  { year: "Ingrid Guga", text: 'Nossa equipe aumenta', },
+  { year: "Rena Gonçalves", text: 'Mais de 500 alunos matriculados', },
   { year: 2021, text: 'Vencemos todos os desafios', },
   { year: 2022, text: 'Continuamos com a excelência UNIP', },
 ];

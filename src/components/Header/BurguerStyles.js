@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const Cabecalho = styled.header`
     display:flex;
-    justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     width: 100%;
@@ -17,14 +16,23 @@ export const Cabecalho = styled.header`
 
 `
 
+export const ImgLogo = styled.img`
+  width:90px;
+  height: 90px;
+  @media(max-width: 768px){
+    margin-left: 3rem;
+  }
+
+
+`
 export const SocialContainer = styled.div`
   display: flex;
   position: fixed;
   right: 10px;
-  top: 2px;
+
 
   @media(min-width: 769px){
-    top: 15px;
+    top: 18px;
     right: 15px;
   }
 `
@@ -33,7 +41,7 @@ export const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
   position: fixed;
-  top: 15px;
+  top: 18px;
   left: 20px;
   z-index: 20;
   display: none;
@@ -67,13 +75,14 @@ export const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
+
   
   li {
- 
+    
     padding: 1rem 1rem;
     text-align: right;
     cursor: pointer;
-    
+    font-weight: bold;
     @media(max-width: 768px) {
       border-bottom: 1px solid;
       padding: 2.5rem 1rem;
@@ -81,8 +90,11 @@ export const Ul = styled.ul`
    
   }
   li:hover{
-    
+
+    transition: 0.8s ease;
+    color: #000;
   }
+
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-color: #000;
@@ -97,5 +109,8 @@ export const Ul = styled.ul`
     li {
       color: white;
     }
+  }
+  @media(min-width: 769px){
+    margin-left: 3rem;
   }
 `;

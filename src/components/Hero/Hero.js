@@ -1,82 +1,21 @@
 import React, { useRef, useEffect } from 'react';
 import { Section, SectionTitle, SectionDivider } from '../../styles/GlobalComponents';
-import { LeftSection } from './HeroStyles';
+import { LeftSection, ItypedDiv, TextStyled } from './HeroStyles';
 import { init } from "ityped";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { ProGallery } from 'pro-gallery';
-import 'pro-gallery/dist/statics/main.css';
+import Carousel from 'react-gallery-carousel';
+import 'react-gallery-carousel/dist/index.css';
+import AOS from 'aos';
+
+
 
 const Hero = () => {
+  const images = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0].map((number) => ({
+    src: `https://placedog.net/${number}00/${number}00?id=${number}`
+  }));
 
- 
-
-      // Add your images here...
-      const items = [
-          { // Image item:
-              itemId: 'sample-id',
-              mediaUrl: 'https://i.picsum.photos/id/674/200/300.jpg?hmac=kS3VQkm7AuZdYJGUABZGmnNj_3KtZ6Twgb5Qb9ITssY',
-              metaData: {
-                  type: 'image',
-                  height: 200,
-                  width: 100,
-                  title: 'sample-title',
-                  description: 'sample-description',
-                  focalPoint: [0, 0],
-                  link: {
-                      url: 'http://example.com',
-                      target: '_blank'
-                  },
-              }
-          },
-          { // Another Image item:
-              itemId: 'differentItem',
-              mediaUrl: 'https://i.picsum.photos/id/1003/1181/1772.jpg?hmac=oN9fHMXiqe9Zq2RM6XT-RVZkojgPnECWwyEF1RvvTZk',
-              metaData: {
-                  type: 'image',
-                  height: 200,
-                  width: 100,
-                  title: 'sample-title',
-                  description: 'sample-description',
-                  focalPoint: [0, 0],
-                  link: {
-                      url: 'http://example.com',
-                      target: '_blank'
-                  },
-              }
-          },
-          { // HTML item:
-              itemId: 'htmlItem',
-              html: "<div style='width: 300px; height: 200px; background:pink;'>I am a text block</div>",
-              metadata: {
-                  type: "text",
-                  height: 200,
-                  width: 300,
-                  title: 'sample-title',
-                  description: 'sample-description',
-                  backgroundColor: 'pink'
-              },
-  
-          },
-      ]
-  
-      // The options of the gallery (from the playground current state)
-      const options = {
-          galleryLayout: -1,
-      };
-  
-      // The size of the gallery container. The images will fit themselves in it
-      const container = {
-          width: window.innerWidth,
-          height: window.innerHeight
-      };
-  
-      // The eventsListener will notify you anytime something has happened in the gallery.
-      const eventsListener = (eventName, eventData) => console.log({eventName, eventData}); 
-  
-      // The scrollingElement is usually the window, if you are scrolling inside another element, suplly it here
-      const scrollingElement = window;
-
-
+  useEffect(() => {
+    AOS.init();
+  }, [])
 
   const textRef = useRef();
 
@@ -84,7 +23,7 @@ const Hero = () => {
     init(textRef.current, {
       showCursor: true,
       backDelay: 1500,
-      backSpeed: 60,
+      backSpeed: 120,
       strings: ["Campus", "Quadras", "Laboratórios", "Administrativo"],
     });
 
@@ -96,23 +35,34 @@ const Hero = () => {
     <>
       <Section nopadding>
         <SectionDivider divider />
-
+        <SectionTitle>
+        <span ref={textRef}></span>
+        </SectionTitle>
         <LeftSection>
-          <SectionTitle>
-            <span>Conheça nossa estrutura</span>
-          </SectionTitle>
-          <SectionTitle>
-            <span ref={textRef}></span>
-          </SectionTitle>
-          <ProGallery
-              items={items}
-              options={options}
-              container={container}
-              eventsListener={eventsListener}
-              scrollingElement={scrollingElement}
+          <ItypedDiv>
+          
+            
+           
+            
+          </ItypedDiv>
+          <Carousel
+            canAutoPlay={true}
+            hasSizeButton={false}
+            isAutoPlaying={true}
+            hasMediaButton={false}
+            hasLeftButton={false}
+            hasRightButton={false}
+            hasCaptions={false}
+            hasIndexBoard={false}
+            hasCaptionsAtMax={false}
+            images={images} style={{ height: 400, width: '100%' }}
           />
+
+
         </LeftSection>
+
       </Section>
+
     </>
   )
 
