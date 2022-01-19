@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import { Section, SectionTitle, SectionDivider } from '../../styles/GlobalComponents';
-import { LeftSection, ItypedDiv, TextStyled } from './HeroStyles';
+import { Section, SectionTitle, SectionDivider, SectionText } from '../../styles/GlobalComponents';
+import { LeftSection, ItypedDiv,  } from './HeroStyles';
 import { init } from "ityped";
 import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
@@ -9,7 +9,7 @@ import AOS from 'aos';
 
 
 const Hero = () => {
-  const images = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0].map((number) => ({
+  const images = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0].map((number) => ({
     src: `https://placedog.net/${number}00/${number}00?id=${number}`
   }));
 
@@ -36,14 +36,25 @@ const Hero = () => {
       <Section nopadding>
         <SectionDivider divider />
         <SectionTitle>
-        <span ref={textRef}></span>
+          Conheça nossa estrutura
         </SectionTitle>
+
         <LeftSection>
           <ItypedDiv>
-          
-            
-           
-            
+
+            <SectionTitle>
+              <span ref={textRef}></span>
+            </SectionTitle>
+            <SectionText>
+              Teste Texto
+            </SectionText>
+            <SectionText>
+              Teste Texto
+            </SectionText>
+
+
+
+
           </ItypedDiv>
           <Carousel
             canAutoPlay={true}

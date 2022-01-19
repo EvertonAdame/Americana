@@ -1,20 +1,21 @@
 import styled from 'styled-components';
 
 export const Img = styled.img`
-  width:150px;
+  width:180px;
   height: 150px;
-  border-radius: 50%;
+
   object-fit: cover;
   overflow: hidden;
 `
 
 export const GridContainer = styled.section`
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 padding: 1rem;
 place-items: center;
 column-gap: 1rem;
 row-gap: 3rem;
+
 @media ${(props) => props.theme.breakpoints.sm} {
   display: flex;
   flex-direction: column;
@@ -24,26 +25,32 @@ row-gap: 3rem;
 
 `
 export const BlogCard = styled.div`
-  border-radius: 10px;
+  
   height: 100%;
-  box-shadow: 1px 1px 10px #afa0ff;
   text-align: center;
-  width: 220px;
-
+  width: 190px;
+ 
+  
+  
 
   .card-info {
     display: flex;
     justify-content: center;
-
+    
 }
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
+    border: none;
+    border-bottom: 1px solid white;
+  
   }
+
 `;
 export const TitleContent = styled.div`
   text-align: center;
   z-index: 20;
   width: 100%;
+ 
 
 `;
 

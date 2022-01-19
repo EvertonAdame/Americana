@@ -16,8 +16,7 @@ export const Section = styled.section`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: ${(props) => props.nopadding ? "0" : "32px 16px 0" } ;
-
-    width: calc(100vw - 32px);
+    width: calc(100vw -32px);
     flex-direction: column;
   }
 `
@@ -52,6 +51,7 @@ export const SectionTitle = styled.h2`
   font-size: ${(props) => props.main ? '65px' : '56px'};
   line-height: ${(props) => props.main ? '72px' : '56px'};
   width: max-content;
+  z-index: 2;
   max-width: 100%;
   background: #fff;
   -webkit-background-clip: text;
@@ -82,20 +82,20 @@ export const SectionText = styled.p`
   font-size: 24px;
   line-height: 40px;
   font-weight: 300;
-  padding-bottom: 3.6rem;
+
+  z-index: 2;
   color: #fff;
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 670px;
     font-size: 20px;
     line-height: 32px;
-    padding-bottom: 24px;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 16px;
     line-height: 24px;
-    padding-bottom: 16px;
+    
   }
 `
 
